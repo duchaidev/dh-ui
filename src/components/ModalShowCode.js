@@ -4,12 +4,18 @@ import CodeEditor from "@uiw/react-textarea-code-editor";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
+import hljs from "highlight.js";
+import "highlight.js/styles/atom-one-dark.css";
+
 const ModalShowCode = ({ showModal, setShowModal, htmlcode }) => {
+  useEffect(() => {
+    hljs.highlightAll();
+  }, []);
   return (
     <div
       className={` ${
         showModal === true ? "opacity-100 " : "pointer-events-none opacity-0"
-      } fixed top-0 bottom-0 left-0 right-0 flex items-center justify-center bg-black bg-opacity-40 transition-all duration-200 ease-in-out`}
+      } fixed top-0 bottom-0 left-0 right-0 flex z-50 items-center justify-center bg-black bg-opacity-40 transition-all duration-200 ease-in-out`}
       onClick={() => {
         setShowModal(false);
       }}
@@ -31,40 +37,30 @@ const ModalShowCode = ({ showModal, setShowModal, htmlcode }) => {
           </button>
         </div>
         <h3 className="text-lg font-semibold ">Tailwind Css</h3>
-        {/* <CodeEditor
-          // prefixCls="custom-code-editor"
-          value={htmlcode}
-          language="html"
-          // onChange={(evn) => setCode(evn.target.value)}
-          className="w-tc-editor-text"
-          // disabled
-          padding={15}
-          data-color-mode="dark"
-          style={{
-            fontSize: 14,
-            fontWeight: "500",
-            backgroundColor: "#0f172a",
-            color: "#fff",
-            letterSpacing: "0.5px",
-            lineHeight: "1.5",
-            height: "100%",
-            marginTop: "20px",
-            borderRadius: "5px",
-            overflowY: "auto",
-            fontFamily:
-              "input Mono,Monospace,ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
-          }}
-        /> */}
 
-        <SyntaxHighlighter
-          language="javascript"
-          wrapLines
-          wrapLongLines
-          style={atomOneDark}
-          className="w-tc-editor-text !bg-[#0d1526] !leading-[22px]"
-        >
-          {htmlcode}
-        </SyntaxHighlighter>
+        <pre className="max-h-[80%]">
+          <code
+            className="language-html"
+            style={{
+              fontSize: 14,
+              fontWeight: "500",
+              backgroundColor: "#0f172a",
+              letterSpacing: "0.5px",
+              lineHeight: "1.5",
+              height: "100%",
+              marginTop: "20px",
+              borderRadius: "5px",
+              overflowY: "auto",
+
+              fontFamily:
+                "input Mono,Monospace,ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
+              whiteSpace: "pre-wrap",
+              wordBreak: "break-word",
+            }}
+          >
+            {htmlcode}
+          </code>
+        </pre>
       </div>
     </div>
   );
