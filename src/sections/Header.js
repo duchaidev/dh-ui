@@ -11,17 +11,17 @@ const Header = () => {
         <span className="text-base font-bold">DevHub</span>
       </NavLink>
       <div className="flex items-center gap-4">
-        <NavLink to={"/register"}>
-          <button className="text-sm font-medium text-white px-6 py-2 rounded-md bg-[#1e293b]">
-            Register
+        <NavLink to={"https://www.linkedin.com/in/duchaidev/"} target="_blank">
+          <button className="px-6 py-2 text-sm font-medium text-[#1e293b] rounded-md bg-primary">
+            Contact
           </button>
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to={"/login"}
-          className="text-sm font-medium text-[#1e293b] px-6 py-2 rounded-md bg-primary"
+          className="text-sm font-medium text-[#1e293b] px-6 py-2 rounded-md bg-primary bg-[#1e293b]"
         >
-          Login
-        </NavLink>
+          Facebook
+        </NavLink> */}
       </div>
     </section>
   );

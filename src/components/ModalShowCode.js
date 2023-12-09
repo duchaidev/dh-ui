@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
 import CloseIcon from "./icons/CloseIcon";
-import CodeEditor from "@uiw/react-textarea-code-editor";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
@@ -21,7 +18,7 @@ const ModalShowCode = ({ showModal, setShowModal, htmlcode }) => {
       }}
     >
       <div
-        className="bg-[#1e293b] flex flex-col rounded-lg w-[50%] h-[75%] p-5 pb-8"
+        className="bg-[#1e293b] flex flex-col rounded-lg w-[50%] max-h-[75%] p-5 pb-8"
         onClick={(e) => {
           e.stopPropagation();
         }}

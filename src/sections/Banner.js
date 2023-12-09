@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -24,9 +25,13 @@ const Banner = () => {
         Get your free UI components with just few click
       </h1>
       <div>
-        <button className="text-sm font-medium text-white px-6 py-2 rounded-md bg-[#1e293b]">
+        <NavLink
+          to={"https://github.com/duchaidev"}
+          target="_blank"
+          className="text-sm font-medium text-white px-6 py-2 rounded-md bg-[#1e293b]"
+        >
           View on Github
-        </button>
+        </NavLink>
       </div>
     </section>
   );
