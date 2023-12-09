@@ -37,6 +37,10 @@ const typeComponents = [
   },
   {
     id: "9",
+    type: "Loading",
+  },
+  {
+    id: "10",
     type: "Other",
   },
 ];

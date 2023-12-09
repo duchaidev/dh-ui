@@ -33,9 +33,9 @@ const ModalShowCode = ({ showModal, setShowModal, htmlcode }) => {
             <CloseIcon></CloseIcon>
           </button>
         </div>
-        <h3 className="text-lg font-semibold ">Tailwind Css</h3>
+        <h3 className="text-lg font-semibold mb-[20px]">Tailwind Css</h3>
 
-        <pre className="max-h-[80%]">
+        <pre className="max-h-[90%] overflow-y-auto">
           <code
             className="language-html"
             style={{
@@ -45,10 +45,9 @@ const ModalShowCode = ({ showModal, setShowModal, htmlcode }) => {
               letterSpacing: "0.5px",
               lineHeight: "1.5",
               height: "100%",
-              marginTop: "20px",
               borderRadius: "5px",
               overflowY: "auto",
-
+              maxHeight: "90%",
               fontFamily:
                 "input Mono,Monospace,ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace",
               whiteSpace: "pre-wrap",

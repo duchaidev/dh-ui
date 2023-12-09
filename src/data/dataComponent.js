@@ -4,15 +4,42 @@ const dataComponent = [
     nameAuthor: "DucHai",
     type: "Button",
     nameCode: "Button",
-    htmlcode: `<div role="status" class="max-w-sm animate-pulse">
-        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px] mb-2.5"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[330px] mb-2.5"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[300px] mb-2.5"></div>
-        <div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]"></div>
-        <span class="sr-only">Loading...</span>
+    htmlcode: `<button type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Green</button>
+        `,
+  },
+  {
+    id: 2,
+    nameAuthor: "DucHai",
+    type: "Loading",
+    nameCode: "Skeleton",
+    htmlcode: `<div role="status" class="space-y-2.5 animate-pulse max-w-lg">
+    <div class="flex items-center w-full">
+        <div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32"></div>
+        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div></div><div class="flex items-center w-full max-w-[480px]"><div class="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div><div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+    </div><div class="flex items-center w-full max-w-[400px]">
+        <div class="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+        <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-80"></div>
+        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
     </div>
+    <div class="flex items-center w-full max-w-[480px]">
+        <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+                <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+    </div>
+    <div class="flex items-center w-full max-w-[440px]">
+        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-32"></div>
+        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-24"></div>
+        <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-full"></div>
+    </div>
+    <div class="flex items-center w-full max-w-[360px]">
+        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+        <div class="h-2.5 ms-2 bg-gray-200 rounded-full dark:bg-gray-700 w-80"></div>
+        <div class="h-2.5 ms-2 bg-gray-300 rounded-full dark:bg-gray-600 w-full"></div>
+    </div>
+    <span class="sr-only">Loading...</span>
+</div>
         `,
   },
 ];
@@ -27,3 +54,4 @@ export default dataComponent;
 //     type: "Table",
 //     type: "Typography",
 //     type: "Other",
+//     type: "Loading",

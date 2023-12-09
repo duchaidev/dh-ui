@@ -39,10 +39,12 @@ const ItemComponent = ({ htmlcode, author, namecode }) => {
         </button>
       </div>
 
-      <div
-        className="flex items-center justify-center h-[80%] w-full"
-        dangerouslySetInnerHTML={{ __html: htmlcode }}
-      ></div>
+      <div className="flex items-center justify-center h-[80%] w-full">
+        <div
+          className="max-w-[90%] max-h-[70%]"
+          dangerouslySetInnerHTML={{ __html: htmlcode }}
+        ></div>
+      </div>
       <div className="flex items-center justify-between h-[10%]">
         <p className="flex items-center justify-center gap-1">
           <span className="font-semibold text-[#e7e7e7]">{namecode}</span>
